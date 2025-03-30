@@ -8,11 +8,13 @@ import { persistStore, persistReducer } from "redux-persist";
 const contactsPersistConfig = {
 	key: "contacts",
 	storage,
+	whitelist: ['items'],
   };
 
   const filtersPersistConfig = {
 	key: "filters",
 	storage,
+	whitelist: ['name'],
   };
 
 export const store = configureStore({
